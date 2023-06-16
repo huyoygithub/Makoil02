@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="huyoy.project.makoil02.view.home.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_guide"
+            app:destination="@id/guide" />
+        <action
+            android:id="@+id/action_home2_to_account"
+            app:destination="@id/account" />
+        <action
+            android:id="@+id/action_home2_to_history"
+            app:destination="@id/history" />
+    </fragment>
+    <fragment
+        android:id="@+id/account"
+        android:name="huyoy.project.makoil02.view.account.Account"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_account_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_account_to_history"
+            app:destination="@id/history" />
+        <action
+            android:id="@+id/action_account_to_guide"
+            app:destination="@id/guide" />
+    </fragment>
+    <fragment
+        android:id="@+id/history"
+        android:name="huyoy.project.makoil02.view.history.History"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_history_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_history_to_guide"
+            app:destination="@id/guide" />
+        <action
+            android:id="@+id/action_history_to_account"
+            app:destination="@id/account" />
+    </fragment>
+    <fragment
+        android:id="@+id/guide"
+        android:name="huyoy.project.makoil02.view.guide.Guide"
+        android:label="fragment_guide"
+        tools:layout="@layout/fragment_guide" >
+        <action
+            android:id="@+id/action_guide_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_guide_to_history"
+            app:destination="@id/history" />
+        <action
+            android:id="@+id/action_guide_to_account"
+            app:destination="@id/account" />
+    </fragment>
+</navigation>

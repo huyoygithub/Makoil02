@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/mode1"
+        android:title="mode"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/manual1"
+                android:title="Manual"
+                app:showAsAction="collapseActionView"/>
+            <item android:id="@+id/auto1"
+                android:title="Auto"
+                app:showAsAction="collapseActionView"/>
+        </menu>
+    </item>
+    <item app:showAsAction="always"
+        android:title=""
+        android:icon="@drawable/save"/>
+
+
+
+</menu>

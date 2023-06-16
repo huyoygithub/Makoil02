@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".view.splash.SplashScreen">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/splash_system"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
