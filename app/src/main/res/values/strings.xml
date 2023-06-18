@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">Makoil02</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_read_the_manual_before_use">Please! Read the manual before use</string>
+    <string name="edit_parameter">(Edit parameter)</string>
+    <string name="status">Status</string>
+    <string name="no_connect">no connect</string>
+    <string name="off">off</string>
+    <string name="on">on</string>
+    <string name="connected">connected</string>
+    <string name="setting">Setting</string>
+    <string name="m">m</string>
+    <string name="n">n</string>
+    <string name="d_mm">d(mm)</string>
+    <string name="ox1">Ox1</string>
+    <string name="ox2">Ox2</string>
+    <string name="step_mm">step(mm)</string>
+    <string name="n_step">n step</string>
+    <string name="m_step">m step</string>
+    <string name="run">Run</string>
+    <string name="stop">Stop</string>
 </resources>

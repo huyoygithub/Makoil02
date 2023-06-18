@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.home.Home_frag">
+    tools:context=".view.home.Home">
     <!--    <com.google.android.material.appbar.AppBarLayout-->
     <!--        android:id="@+id/appBarLayout"-->
     <!--        android:layout_width="match_parent"-->
@@ -18,24 +18,22 @@
         android:id="@+id/tb_home"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:menu="@menu/menu_toolbar_home"
         android:layout_margin="10dp"
-        app:title="Makoil"
         android:background="@drawable/radius_toolbar"
-        app:titleTextColor="@color/md_theme_light_primary"
-        />
+        app:menu="@menu/menu_toolbar_home"
+        app:title="Makoil"
+        app:titleTextColor="@color/md_theme_light_primary" />
     <!--    </com.google.android.material.appbar.AppBarLayout>-->
 
     <ScrollView
-        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
 
 
             <com.airbnb.lottie.LottieAnimationView
@@ -48,25 +46,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Trạng thái"
+                android:text="@string/status"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txt_state"
+                android:id="@+id/txt_status_run"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="off"
+                android:text="@string/on"
                 android:textSize="18sp"
                 android:textStyle="italic" />
 
             <TextView
+                android:id="@+id/txt_status_connect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Thông số cài đặt"
-                android:textSize="18sp" />
+                android:text="@string/no_connect"
+                android:textSize="18sp"
+                android:textStyle="italic" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -87,71 +87,205 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
-                    android:text="Setting"
+                    android:text="@string/setting"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/txt_edit_parameter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="(Thủ công )" />
+                    android:drawableEnd="@drawable/pen_edit"
+                    android:padding="4dp"
+                    android:text="@string/edit_parameter"
+                    android:textStyle="italic" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/container_ox"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="300dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    app:boxCornerRadiusBottomEnd="10dp"
-                    app:boxCornerRadiusBottomStart="10dp"
-                    app:boxCornerRadiusTopEnd="10dp"
-                    app:boxCornerRadiusTopStart="10dp"
-                    app:endIconMode="clear_text"
+                    android:orientation="horizontal">
 
-                    >
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/ipt_ox"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Speed Ox(rpm)"
-                        android:inputType="numberDecimal"
-                        android:maxLines="1" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:layout_weight="0.5"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/container_oy"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    app:boxCornerRadiusBottomEnd="10dp"
-                    app:boxCornerRadiusBottomStart="10dp"
-                    app:boxCornerRadiusTopEnd="10dp"
-                    app:boxCornerRadiusTopStart="10dp"
-                    app:endIconMode="clear_text"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/ox1"
+                            android:textSize="18sp"
+                            android:textStyle="bold|italic" />
 
-                    >
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:boxCornerRadiusBottomEnd="30dp"
+                            app:boxCornerRadiusBottomStart="30dp"
+                            app:boxCornerRadiusTopEnd="30dp"
+                            app:boxCornerRadiusTopStart="30dp">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/ipt_oy"
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/d_mm"
+                                android:maxLines="1"
+                                android:padding="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:boxCornerRadiusBottomEnd="30dp"
+                            app:boxCornerRadiusBottomStart="30dp"
+                            app:boxCornerRadiusTopEnd="30dp"
+                            app:boxCornerRadiusTopStart="30dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/n"
+                                android:maxLines="1"
+                                android:padding="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:boxCornerRadiusBottomEnd="30dp"
+                            app:boxCornerRadiusBottomStart="30dp"
+                            app:boxCornerRadiusTopEnd="30dp"
+                            app:boxCornerRadiusTopStart="30dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/m"
+                                android:maxLines="1"
+                                android:padding="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Speed Oy(rpm)"
-                        android:inputType="numberDecimal"
-                        android:maxLines="1" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:layout_weight="0.5"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/ox2"
+                            android:textSize="18sp"
+                            android:textStyle="bold|italic" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:boxCornerRadiusBottomEnd="30dp"
+                            app:boxCornerRadiusBottomStart="30dp"
+                            app:boxCornerRadiusTopEnd="30dp"
+                            app:boxCornerRadiusTopStart="30dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/step_mm"
+                                android:maxLines="1"
+                                android:padding="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:boxCornerRadiusBottomEnd="30dp"
+                            app:boxCornerRadiusBottomStart="30dp"
+                            app:boxCornerRadiusTopEnd="30dp"
+                            app:boxCornerRadiusTopStart="30dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/n_step"
+                                android:maxLines="1"
+                                android:padding="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:boxCornerRadiusBottomEnd="30dp"
+                            app:boxCornerRadiusBottomStart="30dp"
+                            app:boxCornerRadiusTopEnd="30dp"
+                            app:boxCornerRadiusTopStart="30dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/m_step"
+                                android:maxLines="1"
+                                android:padding="12dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/anim_data_cloud"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_url="https://assets7.lottiefiles.com/packages/lf20_h2iwbavc.json" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/btn_send_data"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_url="https://assets7.lottiefiles.com/packages/lf20_u4g6bqib.json" />
+
 
                 <Button
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="55dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="Run" />
+                    android:layout_margin="20dp"
+                    android:text="@string/run" />
+                <Button
+                    android:id="@+id/btn_stop"
+                    android:layout_width="150dp"
+                    android:layout_height="55dp"
+                    android:text="@string/stop"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"/>
 
 
             </LinearLayout>
@@ -161,7 +295,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="30dp"
-                android:text="Chế độ tự động tính toán sẽ sớm được cập nhật sau"
+                android:text="@string/please_read_the_manual_before_use"
                 android:textSize="16sp"
                 android:textStyle="italic" />
         </LinearLayout>
