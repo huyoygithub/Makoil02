@@ -11,10 +11,10 @@
     <string name="setting">Setting</string>
     <string name="m">m</string>
     <string name="n">n</string>
-    <string name="d_mm">d(mm)</string>
+    <string name="d_mm">d(10xmm)</string>
     <string name="ox1">Ox1</string>
     <string name="ox2">Ox2</string>
-    <string name="step_mm">step(mm)</string>
+    <string name="step_mm">step(10xmm)</string>
     <string name="n_step">n step</string>
     <string name="m_step">m step</string>
     <string name="run">Run</string>

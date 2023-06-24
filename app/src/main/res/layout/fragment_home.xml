@@ -3,16 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.home.Home">
-    <!--    <com.google.android.material.appbar.AppBarLayout-->
-    <!--        android:id="@+id/appBarLayout"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_margin="10dp"-->
-    <!--        android:background="@drawable/radius_toolbar"-->
-    <!--        android:elevation="20dp"-->
-    <!--        >-->
+    android:layout_height="match_parent">
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tb_home"
@@ -122,6 +114,7 @@
                             android:textStyle="bold|italic" />
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/container_d"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -131,6 +124,7 @@
                             app:boxCornerRadiusTopStart="30dp">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_d"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/d_mm"
@@ -140,6 +134,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/container_n"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -149,6 +144,7 @@
                             app:boxCornerRadiusTopStart="30dp">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_n"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/n"
@@ -158,6 +154,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/container_m"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -167,6 +164,7 @@
                             app:boxCornerRadiusTopStart="30dp">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_m"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/m"
@@ -193,6 +191,7 @@
                             android:textStyle="bold|italic" />
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/container_step"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -202,6 +201,7 @@
                             app:boxCornerRadiusTopStart="30dp">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_step"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/step_mm"
@@ -211,6 +211,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/container_nstep"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -220,6 +221,7 @@
                             app:boxCornerRadiusTopStart="30dp">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_nstep"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/n_step"
@@ -229,6 +231,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/container_mstep"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -238,6 +241,7 @@
                             app:boxCornerRadiusTopStart="30dp">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_mstep"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/m_step"
@@ -251,41 +255,31 @@
 
                 </LinearLayout>
 
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/anim_data_cloud"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:visibility="gone"
-                    app:lottie_autoPlay="true"
-                    app:lottie_loop="true"
-                    app:lottie_url="https://assets7.lottiefiles.com/packages/lf20_h2iwbavc.json" />
-
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/btn_send_data"
-                    android:layout_width="150dp"
-                    android:layout_height="50dp"
-                    android:visibility="gone"
-                    android:layout_gravity="center"
-                    android:layout_margin="8dp"
-                    app:lottie_autoPlay="true"
-                    app:lottie_url="https://assets7.lottiefiles.com/packages/lf20_u4g6bqib.json" />
-
 
                 <Button
+                    android:id="@+id/btn_put_data"
+                    android:layout_width="150dp"
+                    android:layout_height="55dp"
+                    android:text="Put Data"
+                    android:layout_gravity="center"/>
+
+                <Button
+                    android:id="@+id/btn_run"
                     android:layout_width="150dp"
                     android:layout_height="55dp"
                     android:layout_gravity="center"
                     android:layout_margin="20dp"
-                    android:text="@string/run" />
+                    android:text="@string/run"
+                    android:visibility="gone" />
+
                 <Button
                     android:id="@+id/btn_stop"
                     android:layout_width="150dp"
                     android:layout_height="55dp"
-                    android:text="@string/stop"
-                    android:visibility="gone"
                     android:layout_gravity="center"
-                    android:layout_margin="20dp"/>
+                    android:layout_margin="20dp"
+                    android:text="@string/stop"
+                    android:visibility="gone" />
 
 
             </LinearLayout>
